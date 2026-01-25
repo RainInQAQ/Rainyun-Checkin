@@ -196,7 +196,7 @@ def init_selenium(debug: bool, linux: bool) -> WebDriver:
         if chrome_bin and os.path.exists(chrome_bin):
             ops.binary_location = chrome_bin
         # 容器环境使用系统 chromedriver
-        chromedriver_path = os.environ.get("CHROMEWEBDRIVER", "/usr/local/share/chromedriver-linux64")
+        chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", "/usr/local/share/chromedriver-linux64/chromedriver")
         if os.path.exists(chromedriver_path):
             return webdriver.Chrome(service=Service(chromedriver_path), options=ops)
         return webdriver.Chrome(service=Service("./chromedriver"), options=ops)

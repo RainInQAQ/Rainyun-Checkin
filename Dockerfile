@@ -62,7 +62,7 @@ ENV RENEW_PRODUCT_IDS=""
 ENV PUSH_KEY=""
 # Chromium 路径（Debian 系统）
 ENV CHROME_BIN=/usr/bin/chromium
-ENV CHROMEWEBDRIVER=/usr/bin/chromedriver
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
 # 使用 -u 参数禁用 Python 输出缓冲，确保日志实时输出
 CMD ["python", "-u", "rainyun.py"]
